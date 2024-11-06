@@ -16,4 +16,5 @@ async function fetchItems() {
     }
 }
 
+// Load items when the page loads
 document.addEventListener('DOMContentLoaded', fetchItems);

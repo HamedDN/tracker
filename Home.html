@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <script defer src="home.js"></script>
 </head>
 <body>
     <h1>Welcome to Home</h1>
-    <p>This is the home page.</p>
+    <form id="itemForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="text" id="data" placeholder="Data" required />
+        <button type="submit">Add Item</button>
+    </form>
 </body>
 </html>
