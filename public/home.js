@@ -76,12 +76,15 @@ $('#referraldrop').on(
         ;
         response = await response.json();
         if(response.length !== 0)
+        {
+            $('#referralResult').empty();
             for(let record of response)
                 $('#referralResult')
                     .append(
                         $('<p>')
                             .text(`${record.number} - گیرنده (${record.role}) وضعیت: (${record.status}) در تاریخ (${record.date})`)
-        )
+                    )
+        }
         else
             $('#referralResult')
                 .text(``)
