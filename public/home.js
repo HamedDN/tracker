@@ -10,7 +10,7 @@ $('#submit').on(
 
         if(referral.val() == '')
         {
-            alert('یک عنوان زا را انتخاب کنید');
+            alert('یک عنوان را انتخاب کنید');
             return;
         }
         else
@@ -76,7 +76,14 @@ $('#referraldrop').on(
         ;
         response = await response.json();
         if(response.length !== 0)
+            for(let record of response)
+                $('#referralResult')
+                    .append(
+                        $('<p>')
+                            .text(`${record.number} - گیرنده (${record.role}) وضعیت: (${record.status}) در تاریخ (${record.date})`)
+        )
+        else
             $('#referralResult')
-                .text(`گیرنده (${response[0].role}) وضعیت: (${response[0].status}) در تاریخ (${response[0].date})`)
+                .text(``)
     }
 );
