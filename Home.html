@@ -1,17 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <script src="jQuery.js"></script>
     <script defer src="home.js"></script>
 </head>
 <body>
-    <h1>Welcome to Home</h1>
-    <form id="itemForm">
-        <input type="text" id="name" placeholder="Name" required />
-        <input type="text" id="data" placeholder="Data" required />
-        <button type="submit">Add Item</button>
-    </form>
+    <div id="container">
+        <div>
+            <span>شماره</span>
+            <input type="number" id="number" required/>
+        </div>
+        <div>
+            <span>موضوع</span>
+            <input type="text" id="subject" required/>
+        </div>
+        <div>
+            <span>ارجاع دهنده</span>
+            <select id="referraldrop">
+                    <option value="CEO">مدیر عامل</option>
+                    <option value="Deputy Manager">معاون مدیر</option>
+                    <option value="Sales Expert">کارشناس فروش</option>
+                    <option value="Marketing Expert">کارشناس بازاریابی</option>
+                    <option value="Department Head">رئیس بخش</option>
+                    <option value="Finance Manager">مدیر مالی</option>
+                    <option value="HR Manager">مدیر منابع انسانی</option>
+                    <option value="Project Manager">مدیر پروژه</option>
+                    <option value="IT Specialist">کارشناس فناوری اطلاعات</option>
+                    <option value="Data Analyst">تحلیل‌گر داده</option>
+                    <option value="Executive Manager">مدیر اجرایی</option>
+                    <option value="Customer Service Manager">مدیر خدمات مشتریان</option>
+                    <option value="Legal Expert">متخصص حقوقی</option>
+                    <option value="Graphic Designer">طراح گرافیک</option>
+                    <option value="Content Manager">مدیر محتوا</option>
+                    <option value="Accountant">کارشناس حسابداری</option>
+                    <option value="IT Expert">کارشناس IT</option>
+                    <option value="Procurement Manager">مسئول تدارکات</option>
+                    <option value="Operations Manager">مدیر عملیات</option>
+                    <option value="Executive Consultant">مشاور اجرایی</option>
+            </select>
+        </div>
+    </div>
+    <div>گیرنده <span>...</span> <span>...</span> <span>...</span></div>
+    <button id="submit">پایان کار</button>
 </body>
 </html>
