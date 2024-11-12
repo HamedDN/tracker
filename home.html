@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="jQuery.js"></script>
+    <script defer src="home.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        #container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        div {
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 8px;
+            display: block;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #333;
+            background-color: #f7f7f7;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, select:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:focus {
+            outline: none;
+        }
+        #referralResult {
+            min-height: 35px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>فرم ارجاع</h1>
+        <div id="referralForm">
+            <div>
+                <label for="number">شماره</label>
+                <input type="number" id="number" name="number" required/>
+            </div>
+            <div>
+                <label for="subject">موضوع</label>
+                <input type="text" id="subject" name="subject" required/>
+            </div>
+            <div>
+                <label for="referraldrop">ارجاع دهنده</label>
+                <select id="referraldrop" name="referral" required>
+                    <option value="" disabled selected>یک عنوان را انتخاب کنید</option>
+                    <option value="CEO">مدیر عامل</option>
+                    <option value="Deputy Manager">معاون مدیر</option>
+                    <option value="Sales Expert">کارشناس فروش</option>
+                    <option value="Marketing Expert">کارشناس بازاریابی</option>
+                    <option value="Department Head">رئیس بخش</option>
+                    <option value="Finance Manager">مدیر مالی</option>
+                    <option value="HR Manager">مدیر منابع انسانی</option>
+                    <option value="Project Manager">مدیر پروژه</option>
+                    <option value="IT Specialist">کارشناس فناوری اطلاعات</option>
+                    <option value="Data Analyst">تحلیل‌گر داده</option>
+                    <option value="Executive Manager">مدیر اجرایی</option>
+                    <option value="Customer Service Manager">مدیر خدمات مشتریان</option>
+                    <option value="Legal Expert">متخصص حقوقی</option>
+                    <option value="Graphic Designer">طراح گرافیک</option>
+                    <option value="Content Manager">مدیر محتوا</option>
+                    <option value="Accountant">کارشناس حسابداری</option>
+                    <option value="IT Expert">کارشناس IT</option>
+                    <option value="Procurement Manager">مسئول تدارکات</option>
+                    <option value="Operations Manager">مدیر عملیات</option>
+                    <option value="Executive Consultant">مشاور اجرایی</option>
+                </select>
+            </div>
+            <div id="referralResult"></div>
+            <div>
+                <button id="submit">پایان کار</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
