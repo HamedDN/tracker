@@ -51,6 +51,7 @@ app.post(
             let itemData = req.body;
 
             const number = itemData.number;
+
             if(!number)
                 return res.status(400).send('Item number is required');
 
@@ -66,7 +67,6 @@ app.post(
                 id: Math.floor(Math.random() * 1000),
                 status: STATUS_PENDING
             };
-
             const response = await axios.get(`http://localhost:${JSON_SERVER_PORT}/items`);
 
             const existingItem = response.data.find(item => item.number === number);
@@ -84,6 +84,7 @@ app.post(
         }
         catch (error)
         {
+            console.log(error);
             res.status(500).send('Error adding or updating item');
         }
     }

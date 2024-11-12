@@ -31,6 +31,7 @@
             align-items: center;
             height: 100vh;
             padding: 20px;
+            direction: rtl;
         }
         #container {
             width: 100%;
@@ -55,6 +56,7 @@
             color: #666;
             margin-bottom: 8px;
             display: block;
+            text-align: right;
         }
         input, select {
             width: 100%;
@@ -65,6 +67,7 @@
             color: #333;
             background-color: #f7f7f7;
             transition: border-color 0.3s ease;
+            text-align: right;
         }
         input:focus, select:focus {
             border-color: #007BFF;
@@ -102,36 +105,24 @@
         <div id="referralForm">
             <div>
                 <label for="number">شماره</label>
-                <input type="number" id="number" name="number" required/>
+                <input type="number" id="number" name="number"/>
             </div>
             <div>
-                <label for="subject">موضوع</label>
-                <input type="text" id="subject" name="subject" required/>
+                <label for="topics">موضوع</label>
+                <select id="topics">
+                    <option value="" disabled selected>-- انتخاب موضوع --</option>
+                    <option value="مدیریت">مدیریت</option>
+                    <option value="فناوری اطلاعات">فناوری اطلاعات</option>
+                    <option value="مالی و حسابداری">مالی و حسابداری</option>
+                    <option value="بازاریابی و فروش">بازاریابی و فروش</option>
+                    <option value="منابع انسانی">منابع انسانی</option>
+                    <option value="خدمات مشتریان">خدمات مشتریان</option>
+                </select>
             </div>
             <div>
-                <label for="referraldrop">ارجاع دهنده</label>
-                <select id="referraldrop" name="referral" required>
-                    <option value="" disabled selected>یک عنوان را انتخاب کنید</option>
-                    <option value="CEO">مدیر عامل</option>
-                    <option value="Deputy Manager">معاون مدیر</option>
-                    <option value="Sales Expert">کارشناس فروش</option>
-                    <option value="Marketing Expert">کارشناس بازاریابی</option>
-                    <option value="Department Head">رئیس بخش</option>
-                    <option value="Finance Manager">مدیر مالی</option>
-                    <option value="HR Manager">مدیر منابع انسانی</option>
-                    <option value="Project Manager">مدیر پروژه</option>
-                    <option value="IT Specialist">کارشناس فناوری اطلاعات</option>
-                    <option value="Data Analyst">تحلیل‌گر داده</option>
-                    <option value="Executive Manager">مدیر اجرایی</option>
-                    <option value="Customer Service Manager">مدیر خدمات مشتریان</option>
-                    <option value="Legal Expert">متخصص حقوقی</option>
-                    <option value="Graphic Designer">طراح گرافیک</option>
-                    <option value="Content Manager">مدیر محتوا</option>
-                    <option value="Accountant">کارشناس حسابداری</option>
-                    <option value="IT Expert">کارشناس IT</option>
-                    <option value="Procurement Manager">مسئول تدارکات</option>
-                    <option value="Operations Manager">مدیر عملیات</option>
-                    <option value="Executive Consultant">مشاور اجرایی</option>
+                <label for="positions">ارجاع دهنده</label>
+                <select id="positions">
+                    <option value="" disabled selected>-- ابتدا موضوع را انتخاب کنید --</option>
                 </select>
             </div>
             <div id="referralResult"></div>
